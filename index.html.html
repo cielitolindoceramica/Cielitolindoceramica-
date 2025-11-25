@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pago - Cielito Lindo</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Cielito Lindo Cerámica</h1>
+        <p>Generando el monto según la fecha...</p>
+    </div>
+
+<script>
+    const hoy = new Date().getDate();
+    let link = "";
+
+    if (hoy >= 1 && hoy <= 10) {
+        link = "https://mpago.la/1123Pu2";
+    } else if (hoy >= 11 && hoy <= 15) {
+        link = "https://mpago.la/2ASJMTq";
+    } else {
+        link = "https://mpago.la/1m8ErDs";
+    }
+
+    window.location.href = link;
+</script>
+</body>
+</html>
