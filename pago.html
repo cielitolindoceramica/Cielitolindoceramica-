@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pago Cielito Lindo</title>
+    <script>
+        function redirigir() {
+            const hoy = new Date();
+            const dia = hoy.getDate();
+            let url = "";
+
+            // 1 al 10
+            if (dia >= 1 && dia <= 10) {
+                url = "https://mpago.la/2zTRyaS";
+
+            // 11 al 15
+            } else if (dia >= 11 && dia <= 15) {
+                url = "https://mpago.la/2ZEu14u";
+
+            // 16 al 31
+            } else {
+                url = "https://mpago.la/2K6ZzRK";
+            }
+
+            window.location.href = url;
+        }
+
+        window.onload = redirigir;
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #fff8f4;
+            color: #5c4033;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .loader {
+            border: 6px solid #f3d9c7;
+            border-top: 6px solid #5c4033;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Cielito Lindo Cerámica</h2>
+    <p>Redirigiendo al sistema de pago...</p>
+    <div class="loader"></div>
+</body>
+</html>
